@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t dongwon-lee-dev/productcatalogservice:latest ."
+                        sh "docker build -t mapleliberty/productcatalogservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push dongwon-lee-dev/productcatalogservice:latest "
+                        sh "docker push mapleliberty/productcatalogservice:latest "
                     }
                 }
             }
